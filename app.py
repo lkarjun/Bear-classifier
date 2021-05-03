@@ -11,6 +11,8 @@ app = FastAPI()
 
 templates = Jinja2Templates(directory='.')
 
+def get_y(path): return path.parent.name.split(' ')
+
 def predict(filename: str):
     '''classifying image.'''
     model = load_learner(Path.cwd()/'bear.pkl')
