@@ -11,7 +11,7 @@ app = FastAPI()
 
 templates = Jinja2Templates(directory='.')
 
-def get_y(path): return path.parent.name.split(' ')
+
 
 def predict(filename: str):
     '''classifying image.'''
@@ -31,7 +31,7 @@ async def home(request: Request):
 async def create_upload_file(request: Request, file: UploadFile = File(...)):
     '''Uploading file'''
     print(file.filename)
-    
+    def get_y(path): return path.parent.name.split(' ')
     if 'image' in file.content_type:
         contents = await file.read()
 
