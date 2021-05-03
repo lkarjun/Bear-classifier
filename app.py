@@ -36,7 +36,7 @@ async def create_upload_file(request: Request, file: UploadFile = File(...)):
         with open(file.filename, 'wb') as f:
             f.write(contents)
         
-        prediction = predict(file.filename)
+        prediction = ','.join(predict(file.filename))
         print(prediction)
         remove(file.filename)
 
