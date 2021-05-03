@@ -3,7 +3,7 @@ from fastapi import FastAPI, Request
 from fastai.vision.all import load_learner, PILImage, Path
 from fastapi import FastAPI, File, UploadFile
 from fastapi.templating import Jinja2Templates
-from urllib.request import urlretrieve
+
 from os import remove
 
 app = FastAPI()
